@@ -130,11 +130,11 @@ This document explain the concept of finding the shortest distance between lines
 \end{abstract}
 Download all python codes from 
 \begin{lstlisting}
-https://github.com/vipulmalik8569/MT-EE5609/tree/master/Assignment2
+https://github.com/vipulmalik8569/MT-EE5609
 \end{lstlisting}
 and latex-tikz codes from 
 \begin{lstlisting}
-https://github.com/vipulmalik8569/MT-EE5609/tree/master/Assignment2
+https://github.com/vipulmalik8569/MT-EE5609
 \end{lstlisting}
 
 \section{\textbf{Problem}}
@@ -176,14 +176,19 @@ Let $d$ be the shortest distance  between $L_1$, $L_2$ and $\vec{p_1}$, $\vec{p_
 
 For $d$ to be the shortest, we know that,
 \begin{align}
-\vec{b_1}^T(\vec{p_2}-\vec{p_1})&=0\\
-\myvec{-1\\1\\-2}^T  \left(\myvec{0\\1\\-4}+\myvec{1&1\\2&-1\\-2&2} \myvec{s\\t}\right)&=0\\
-\myvec{5&-6}\myvec{s\\t}&=-9\\
-\vec{b_2}^T(\vec{p_2}-\vec{p_1})&=0\\
-\myvec{1\\2\\-2}^T  \left(\myvec{0\\1\\-4}+\myvec{1&1\\2&-1\\-2&2} \myvec{s\\t}\right)&=0\\
-\myvec{9&-5}\myvec{s\\t}&=-10
+\vec{b_1}^T(\vec{p_2}-\vec{p_1})=0\\
+\vec{b_2}^T(\vec{p_2}-\vec{p_1})=0\\
+\vec{b_1}^T\left((\vec{a_2}-\vec{a_1})+\myvec{\vec{b_2}&-\vec{b_1}}\myvec{s\\t}\right)=0\\
+\vec{b_2}^T\left((\vec{a_2}-\vec{a_1})+\myvec{\vec{b_2}&-\vec{b_1}}\myvec{s\\t}\right)=0\\
+\myvec{\vec{b_1}^T\vec{b_2}&-\vec{b_1}^T\vec{b_1}}\myvec{s\\t}=\vec{b_1}^T(\vec{a_1}-\vec{a_2})\\
+\myvec{\vec{b_2}^T\vec{b_2}&-\vec{b_2}^T\vec{b_1}}\myvec{s\\t}=\vec{b_2}^T(\vec{a_1}-\vec{a_2})\\
+\myvec{\vec{b_1}^T\vec{b_2}&-\vec{b_1}^T\vec{b_1}\\\vec{b_2}^T\vec{b_2}&-\vec{b_2}^T\vec{b_1}}\myvec{s\\t}=\myvec{\vec{b_1}^T(\vec{a_1}-\vec{a_2})\\\vec{b_2}^T(\vec{a_1}-\vec{a_2})}
 \end{align}\\
-Solving equations $(2.0.10)$ and $(2.0.13)$ we get
+By putting the values of $\vec{a_1}, \vec{a_2}, \vec{b_1}$ and $\vec{b_2}$ in equation $(2.0.14)$ we get:
+\begin{align}
+\myvec{5&-6\\9&-5}\myvec{s\\t}&=\myvec{-9\\-10}
+\end{align}
+Solving equations $(2.0.15)$ we get
 $$s=\frac{-15}{29}, t=\frac{31}{29}$$
 
 By putting the values of $t$ and $s$ in equation $(2.0.1)$ and $(2.0.2)$ respectively we get:
