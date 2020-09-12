@@ -184,13 +184,13 @@ For $d$ to be the shortest, we know that,
 \end{align}
 By combining equation \eqref{eq:10} and \eqref{eq:11} and writing in terms of $\vec{B}$ and $\vec{B}^T$ using \eqref{eq:12} we get:
 \begin{align}
-\vec{B}^T\vec{B}\myvec{s\\-t}=\vec{B}^T(\vec{a_1}-\vec{a_2})\label{eq:13}
+\vec{B}^T\vec{B}\myvec{s\\-t}&=\vec{B}^T(\vec{a_1}-\vec{a_2})\label{eq:13}
 \end{align}
 By putting the values of $\vec{a_1}, \vec{a_2}, \vec{b_1}$ and $\vec{b_2}$ in equation \eqref{eq:13} we get:
 \begin{align}
-\myvec{5&6\\9&5}\myvec{s\\-t}&=\myvec{-9\\-10}\label{eq:14}
+\myvec{5&6\\9&5}\myvec{s\\-t}&=\myvec{-9\\-10}\label{eq:14}\label{eq:14}
 \end{align}
-Solving equation \eqref{eq:14} we get
+Solving equation \eqref{eq:14} we get:
 \begin{align}
     s=\frac{-15}{29}, t=\frac{31}{29}
 \end{align}
@@ -200,13 +200,14 @@ By putting the values of $t$ and $s$ in equation \eqref{eq:1} and \eqref{eq:2} r
     \vec{p_1}=\myvec{\frac{-17}{250}\\[0.2cm]\frac{-93}{100}\\[0.2cm]\frac{43}{50}},\vec{p_2}=\myvec{\frac{12}{25}\\[0.2cm]-2\\[0.2cm]\frac{17}{500}}
 \end{align}
 Hence the shortest distance $d$ between the two skew lines is :
-$$d=\norm{\vec{p_2}-\vec{p_1}}=1.4855$$
+\begin{align}
+d=\norm{\vec{p_2}-\vec{p_1}}=1.4855
+\end{align}
 \begin{figure}[h]
-\begin{center}
+\centering
     \includegraphics[width=\columnwidth]{assignment2.png}
     \caption{3-D plot for the skew lines and the shortest distance between them.}
     \label{skew_lines}
-\end{center}
 \end{figure}
 \end{document}
 
