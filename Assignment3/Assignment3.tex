@@ -114,7 +114,7 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Assignnment-3}
+\title{Assignment-3}
 \author{Vipul Kumar Malik \\ AI20MTECH14006}
 
 \date{\today}
@@ -159,7 +159,8 @@ O  : 0x_1 + 4x_2 - 4x_3 - 0x_4 = 0
 \end{align}
 In matrix form this can be written as:
 \begin{align}
-  \myvec{1&0&-1&0\\2&0&0&-1\\0&2&0&-1\\0&1&-1&0\\0&4&-4&0}\myvec{x_1\\x_2\\x_3\\x_4}=\myvec{0\\0\\0\\0\\0}
+A\vec{x}&=0\\
+  \myvec{1&0&-1&0\\2&0&0&-1\\0&2&0&-1\\0&1&-1&0\\0&4&-4&0}\myvec{x_1\\x_2\\x_3\\x_4}&=\myvec{0\\0\\0\\0\\0}
 \end{align}
 Using Gaussian Elimination method :
 \begin{align}
@@ -169,9 +170,9 @@ Using Gaussian Elimination method :
 \xleftrightarrow{R_5 \leftrightarrow R_5}\myvec{1&0&-1&0&:&0\\0&4&-4&0&:&0\\0&0&4&-2&:&0\\0&0&-2&1&:&0\\0&0&0&0&:&0}\\
 \xleftrightarrow{R_4 \leftarrow 2R_4-R_3}\myvec{1&0&-1&0&:&0\\0&4&-4&0&:&0\\0&0&4&-2&:&0\\0&0&0&0&:&0\\0&0&0&0&:&0}
 \end{align}
-By solving this we get : 
+Clearly the system is linearly dependent. Therefore by fixing the value of $x_4=2$, one of the possible vector $\vec{x}$ is:
 \begin{align}
-    x_1=x_2=x_3=1,x_4=2
+    \vec{x}=\myvec{1\\1\\1\\2}
 \end{align}
 Hence by putting the values of $x_1,x_2,x_3,x_4$ in equation \eqref{eq:1} we get our balanced chemical equation as followes :
 \begin{align}
