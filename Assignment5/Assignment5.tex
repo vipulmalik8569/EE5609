@@ -138,21 +138,34 @@ and latex-tikz codes from
 https://github.com/vipulmalik8569/MT-EE5609
 \end{lstlisting}
 \section{\textbf{Problem}}
-Find the equation of circle passing through the points $(1,1), (2,-1)$ and $(8,2)$.
-\section{\textbf{Solution}}
-We know that the general equation of circle is :
+Find the equation of circle passing through the points
 \begin{align}
-x^2+y^2+Ax+By+C=0\label{eq:1}
+    \Vec{X_1}=\myvec{1\\1}, \Vec{X_2}=\myvec{2\\-1}, \Vec{X_3}=\myvec{8\\2}\label{eq:0}
 \end{align}
-Therefore by using the three given points we need to find A, B and C. 
+\section{\textbf{Solution}}
+Vector form of the equation of circle with radius $r$ and centered at $\Vec{C}$ is :
+\begin{align}
+(\Vec{X}-\Vec{C})^T(\Vec{X}-\Vec{C})=r^2\label{eq:1}
+\end{align}
+Where
+\begin{align}
+\Vec{X}=\myvec{x\\y}, \Vec{C}=\myvec{x_0\\y_0} 
+\end{align}
+For $\Vec{X_1}$, $\Vec{X_2}$ and $\Vec{X_3}$ \eqref{eq:1} can be written as :
+\begin{align}
+(\Vec{X_1}-\Vec{C})^T(\Vec{X_1}-\Vec{C})=r^2\\
+(\Vec{X_2}-\Vec{C})^T(\Vec{X_2}-\Vec{C})=r^2\\
+(\Vec{X_3}-\Vec{C})^T(\Vec{X_3}-\Vec{C})=r^2
+\end{align}
 
 In the matrix form this can be written as : 
 \begin{align}
- \myvec{x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1}\myvec{A\\B\\C}&=-\myvec{x_1^2+y_1^2\\[0.2cm]x_2^2+y_2^2\\[0.2cm]x_3^2+y_3^2} \label{eq:2} 
+ \myvec{x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1}\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2}&=-\myvec{x_1^2+y_1^2\\[0.2cm]x_2^2+y_2^2\\[0.2cm]x_3^2+y_3^2} \label{eq:2} 
 \end{align}
 By putting the values of $(x_1,y_1),(x_2,y_2)$ and $(x_3,y_3)$ in \eqref{eq:2} we get :
 \begin{align}
- \myvec{1&1&1\\2&-1&1\\8&2&1}\myvec{A\\B\\C}&=\myvec{-2\\-5\\-68} \label{eq:3}    
+ \myvec{1&1&1\\2&-1&1\\8&2&1}\myvec{A\\B\\C}&=\myvec{-2\\-5\\-68} \label{eq:3}\\
+ \Vec{A}=\myvec{A\\B\\C}&=\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2}\label{eq:8}
 \end{align}
 Using Gaussian Elimination method :
 \begin{align}
@@ -162,16 +175,22 @@ Using Gaussian Elimination method :
 \end{align}
 Solving for A, B and C using \eqref{eq:6} we get : 
 \begin{align}
-\Vec{X}=\myvec{A\\B\\C}=\myvec{-9\\-3\\10}
+\Vec{A}=\myvec{A\\B\\C}=\myvec{-9\\-3\\10}
+\end{align}
+Using \eqref{eq:8} we get :
+\begin{align}
+  \Vec{C}=\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}, r^2=12.5   
 \end{align}
 Putting these values in \eqref{eq:1}, the equation of circle is as follows : 
 \begin{align}
-x^2+y^2-9x-3y+10=0\label{eq:8}   
+\norm{\Vec{X}-\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}}^2=12.5\label{eq:14}
 \end{align}
+Plot of the circle given by equation \eqref{eq:14} is as follows :
 \begin{figure}[h]
 \centering
     \includegraphics[width=\columnwidth]{circle2.png}
-    \caption{Plot of the circle given by equation \eqref{eq:8}}
+    \caption{Circle centered at $(4.5, 1.5)$ with radius $3.53cm$.}
     \label{circle}
 \end{figure}
 \end{document}
+
