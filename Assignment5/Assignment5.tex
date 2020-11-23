@@ -140,52 +140,50 @@ https://github.com/vipulmalik8569/MT-EE5609
 \section{\textbf{Problem}}
 Find the equation of circle passing through the points
 \begin{align}
-    \Vec{X_1}=\myvec{1\\1}, \Vec{X_2}=\myvec{2\\-1}, \Vec{X_3}=\myvec{8\\2}\label{eq:0}
+    \vec{x_1}=\myvec{1\\1}, \vec{x_2}=\myvec{2\\-1}, \vec{x_3}=\myvec{8\\2}\label{eq:0}
 \end{align}
 \section{\textbf{Solution}}
-Vector form of the equation of circle with radius $r$ and centered at $\Vec{C}$ is :
+Vector form of the equation of circle with radius $r$ and centered at $\vec{c}$ is :
 \begin{align}
-(\Vec{X}-\Vec{C})^T(\Vec{X}-\Vec{C})=r^2\label{eq:1}
+\vec{x}^T\vec{x}-2\vec{c}^T\vec{x}+\vec{c}^T\vec{c}-r^2=0\label{eq:1}
 \end{align}
 Where
 \begin{align}
-\Vec{X}=\myvec{x\\y}, \Vec{C}=\myvec{x_0\\y_0} 
+\vec{x}=\myvec{x\\y}, \vec{c}=\myvec{x_0\\y_0} 
 \end{align}
-For $\Vec{X_1}$, $\Vec{X_2}$ and $\Vec{X_3}$ \eqref{eq:1} can be written as :
+For $\vec{x_1}$, $\vec{x_2}$ and $\vec{x_3}$ equation \eqref{eq:1} can be written as:
 \begin{align}
-(\Vec{X_1}-\Vec{C})^T(\Vec{X_1}-\Vec{C})=r^2\\
-(\Vec{X_2}-\Vec{C})^T(\Vec{X_2}-\Vec{C})=r^2\\
-(\Vec{X_3}-\Vec{C})^T(\Vec{X_3}-\Vec{C})=r^2
+\vec{x_1}^T\vec{x_1}-2\vec{c}^T\vec{x_1}+\vec{c}^T\vec{c}-r^2=0\\
+\vec{x_2}^T\vec{x_2}-2\vec{c}^T\vec{x_2}+\vec{c}^T\vec{c}-r^2=0\\
+\vec{x_3}^T\vec{x_3}-2\vec{c}^T\vec{x_3}+\vec{c}^T\vec{c}-r^2=0
 \end{align}
 
 In the matrix form this can be written as : 
 \begin{align}
- \myvec{x_1&y_1&1\\x_2&y_2&1\\x_3&y_3&1}\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2}&=-\myvec{x_1^2+y_1^2\\[0.2cm]x_2^2+y_2^2\\[0.2cm]x_3^2+y_3^2} \label{eq:2} 
+ \myvec{x_1&y_1&1&\vec{x_1}^T\vec{x_1}\\x_2&y_2&1&\vec{x_2}^T\vec{x_2}\\x_3&y_3&1&\vec{x_3}^T\vec{x_3}}\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2\\1}&=\myvec{0\\0\\0\\0}\label{eq:2} 
 \end{align}
-By putting the values of $(x_1,y_1),(x_2,y_2)$ and $(x_3,y_3)$ in \eqref{eq:2} we get :
+By putting the values of $\vec{x_1},\vec{x_2}$ and $\vec{x_3}$ in \eqref{eq:2} we get :
 \begin{align}
- \myvec{1&1&1\\2&-1&1\\8&2&1}\myvec{A\\B\\C}&=\myvec{-2\\-5\\-68} \label{eq:3}\\
- \Vec{A}=\myvec{A\\B\\C}&=\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2}\label{eq:8}
+ \myvec{1&1&1&2\\2&-1&1&5\\8&2&1&68}\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2\\1}&=\myvec{0\\0\\0\\0} \label{eq:3}
 \end{align}
 Using Gaussian Elimination method :
 \begin{align}
-\xleftrightarrow[R_3 \leftarrow 8R_1-R_3]{R_2 \leftarrow 2R_1-R_2}\myvec{1&1&1:&-2\\0&3&1:&1\\0&6&7:&52}\\
-\xleftrightarrow{R_2 \leftarrow \frac{1}{3} R_2}\myvec{1&1&1:&-2\\[0.2cm]0&1&\frac{1}{3}:&\frac{1}{3}\\[0.2cm]0&6&7:&52}\\
-\xleftrightarrow{R_3 \leftarrow 6R_2-R_3}\myvec{1&1&1:&-2\\[0.2cm]0&1&\frac{1}{3}:&\frac{1}{3}\\[0.2cm]0&0&-5:&-50}\label{eq:6}
+\xleftrightarrow[R_3 \leftarrow 8R_1-R_3]{R_2 \leftarrow 2R_1-R_2}\myvec{1&1&1&2\\0&3&1&-1\\0&6&7&-52}\\
+\xleftrightarrow{R_2 \leftarrow \frac{1}{3} R_2}\myvec{1&1&1&2\\[0.2cm]0&1&\frac{1}{3}&-\frac{1}{3}\\[0.2cm]0&6&7&-52}\\
+\xleftrightarrow{R_3 \leftarrow 6R_2-R_3}\myvec{1&1&1&2\\[0.2cm]0&1&\frac{1}{3}&-\frac{1}{3}\\[0.2cm]0&0&-5&50}\label{eq:6}
 \end{align}
-Solving for A, B and C using \eqref{eq:6} we get : 
+Solving for $\vec{c}$ and $r$ using \eqref{eq:6} we get : 
 \begin{align}
-\Vec{A}=\myvec{A\\B\\C}=\myvec{-9\\-3\\10}
-\end{align}
-Using \eqref{eq:8} we get :
-\begin{align}
-  \Vec{C}=\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}, r^2=12.5   
+\myvec{-2x_0\\-2y_0\\x_0^2+y_0^2-r^2\\1}&=\myvec{-9\\-3\\10\\1}\\
+\vec{c}=\myvec{x_0\\y_0}&=\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}\\
+r^2&=12.5   
 \end{align}
 Putting these values in \eqref{eq:1}, the equation of circle is as follows : 
 \begin{align}
-\norm{\Vec{X}-\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}}^2=12.5\label{eq:14}
+\norm{\vec{x}-\myvec{\frac{9}{2}\\[0.1cm]\frac{3}{2}}}^2-12.5&=0\label{eq:14}\\
+x^2+y^2-9x-6y+10&=0\label{eq:15}
 \end{align}
-Plot of the circle given by equation \eqref{eq:14} is as follows :
+Plot of the circle given by equation \eqref{eq:15} is as follows :
 \begin{figure}[h]
 \centering
     \includegraphics[width=\columnwidth]{circle2.png}
@@ -193,4 +191,3 @@ Plot of the circle given by equation \eqref{eq:14} is as follows :
     \label{circle}
 \end{figure}
 \end{document}
-
