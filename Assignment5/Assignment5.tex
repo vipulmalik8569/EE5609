@@ -145,21 +145,21 @@ Find the equation of circle passing through the points
 \section{\textbf{Solution}}
 Vector form of the equation of circle is :
 \begin{align}
-\vec{x}^T\vec{x}+2\vec{u}^T\vec{x}+f=0\label{eq:1}
-\end{align}
-Where
-\begin{align}
-\vec{x}=\myvec{x\\y}, \vec{u}=\myvec{x_0\\y_0} 
+\vec{x}^T\vec{x}+2\vec{x}^T\vec{u}+f=0\label{eq:1}
 \end{align}
 For $\vec{x_1}$, $\vec{x_2}$ and $\vec{x_3}$ equation \eqref{eq:1} can be written as:
 \begin{align}
-\vec{x_1}^T\vec{x_2}+2\vec{u}^T\vec{x_1}+f=0\\
-\vec{x_2}^T\vec{x_2}+2\vec{u}^T\vec{x_2}+f=0\\
-\vec{x_3}^T\vec{x_3}+2\vec{u}^T\vec{x_3}+f=0
+\vec{x_1}^T\vec{x_1}+2\vec{x_1}^T\vec{u}+f=0\\
+\vec{x_2}^T\vec{x_2}+2\vec{x_2}^T\vec{u}+f=0\\
+\vec{x_3}^T\vec{x_3}+2\vec{x_3}^T\vec{u}+f=0
 \end{align}
-By putting the values of $\vec{x_1},\vec{x_2}$ and $\vec{x_3}$ from \eqref{eq:0} and converting into the matrix form this can be written as : 
+In matrix form this can be written as :
 \begin{align}
- \myvec{2&2&1\\4&-2&1\\16&4&1}\myvec{x_0\\y_0\\f}&=\myvec{-2\\-5\\-68} \label{eq:6}
+    \myvec{2\vec{x_1}^T&1\\2\vec{x_2}^T&1\\2\vec{x_3}^T&1}\myvec{\vec{u}\\f}&=\myvec{-\vec{x_1}^T\vec{x_1}\\-\vec{x_1}^T\vec{x_1}\\-\vec{x_3}^T\vec{x_3}}\label{eq:5}
+\end{align}
+By putting the values of $\vec{x_1},\vec{x_2}$ and $\vec{x_3}$ from \eqref{eq:0} in \eqref{eq:5} we get :   
+\begin{align}
+ \myvec{2&2&1\\4&-2&1\\16&4&1}\myvec{\vec{u}\\f}&=\myvec{-2\\-5\\-68} \label{eq:6}
 \end{align}
 Using Gaussian Elimination method :
 \begin{align}
@@ -169,8 +169,8 @@ Using Gaussian Elimination method :
 \end{align}
 Using \eqref{eq:6} and \eqref{eq:9} we get : 
 \begin{align}
-\myvec{x_0\\y_0\\f}&=\myvec{-\frac{9}{2}\\[0.1cm]-\frac{3}{2}\\[0.1cm]10}\\
-\vec{u}=\myvec{x_0\\y_0}&=\myvec{-\frac{9}{2}\\[0.1cm]-\frac{3}{2}}\\
+\myvec{\vec{u}\\f}&=\myvec{-\frac{9}{2}\\[0.1cm]-\frac{3}{2}\\[0.1cm]10}\\
+\vec{u}&=\myvec{-\frac{9}{2}\\[0.1cm]-\frac{3}{2}}\\
 f&=10   
 \end{align}
 By putting the values of $\vec{u}$ and f in \eqref{eq:1} we get : 
