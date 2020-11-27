@@ -20,12 +20,13 @@ x_circ= circ_gen(u,r)
 plt.plot(x_circ[0,:],x_circ[1,:],label='$circle$')
 
 x=np.arange(-1,10)
-y=(5/12)*x-(38/3)
+co=np.transpose(u)@p + f   # constant c of tangent equation(n^T*x=c)
+fo=u + p  	# Normal Vector n of the tangent equation.
+y=(1/fo[1])*(-co-fo[0]*x)
 plt.plot(x,y,label='$tangent$')
 
 plt.annotate("(4, -11)", (4, -11), (4.5, -11.5))
-plt.annotate("(1.5, -5)", (u[0], u[1]), (u[0]+0.2, u[1]))
-
+plt.annotate("(1.5, -5)", (c[0], c[1]), (c[0]+0.2, c[1]))
 plt.scatter(4,-11,color='blue')
 plt.scatter(u[0],u[1],color='red')
 
