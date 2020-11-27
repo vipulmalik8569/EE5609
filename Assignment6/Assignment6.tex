@@ -147,10 +147,8 @@ Equation of the circle and positional vector $\vec{p}$ is given as :
 \end{align}
 
 \section{\textbf{Solution}}
-We know that the equation of the tangent in parametric form with slope vector $\vec{s}$ is:
-\begin{align}
-    \vec{x}=t\vec{s}+\vec{p}\label{eq:01}
-\end{align}
+
+
 General equation of the circle in vector form is :
 \begin{align}
 \vec{x}^T\vec{x}+2\vec{u}^T\vec{x}+f=0\label{eq:1}
@@ -163,31 +161,25 @@ By comparing \eqref{eq:1} and \eqref{eq:2} we get :
 \begin{align}
     \vec{u}=\myvec{-\frac{3}{2}\\[0.1 cm]5},f=-15\label{eq:3}
 \end{align}
-Using \eqref{eq:3} the center $\vec{c}$ and radius $r$ of the circle can be calculated as : 
+We know that the equation of tangent in the form of normal vector $(\vec{p}+\vec{u})$ and point $\vec{p}$ can be written as:
 \begin{align}
-    \vec{c}&=-\vec{u}=\myvec{\frac{3}{2}\\[0.1 cm]-5}\\
-    r=\sqrt{\vec{u}^T\vec{u}-f}&=\sqrt{\frac{109}{4}+15}=\frac{13}{2}
+    (\vec{p}+\vec{u})^T(\vec{x}-\vec{p})&=0\\
+    (\vec{p}+\vec{u})^T\vec{x}-\vec{p}^T\vec{p}-\vec{u}^T\vec{q}&=0\label{eq:5}
 \end{align}
-Displacement vector from the center $\vec{c}$ to the point $\vec{p}$ is :
+Using \eqref{eq:1}, \eqref{eq:5} will become : 
 \begin{align}
-    \vec{d}=\vec{c}-\vec{p}=\myvec{\frac{-5}{2}\\[0.1cm]6}\label{eq:7}
+    (\vec{p}+\vec{u})^T\vec{x}+\vec{u}^T\vec{p}+f&=0\label{eq:6}
 \end{align}
-We know that the displacement vector $\vec{d}$ is perpendicular to the slope vector $\vec{s}$ of the tangent.\\
-Therefore,
+By putting the values of $\vec{p}$, $\vec{u}$ and $f$ from \eqref{eq:3} in \eqref{eq:6} we get : 
 \begin{align}
-    \vec{s}=\myvec{6\\\frac{5}{2}}
+    \left(\myvec{4\\-11}+\myvec{\frac{-3}{2}\\[0.2cm]5}\right)^T\vec{x}+\myvec{4\\-11}^T\myvec{\frac{-3}{2}\\[0.2cm]5}-15&=0\\
+    \myvec{\frac{5}{2}\\-6}\vec{x}-76&=0
 \end{align}
-By putting the values of $\vec{s}$ and $\vec{p}$ in equation \eqref{eq:01} we get : 
+Hence the equation of the tangent to the circle passing through the point $\vec{p}$ is:
 \begin{align}
-\vec{x}&=t\myvec{6\\\frac{5}{2}}+\myvec{4\\-11}\\
-x&=6t+4\label{eq:10}\\
-y&=\frac{5}{2}t-11\label{eq:11}
+    y=\frac{5}{12}x-\frac{38}{3}\label{eq:9}
 \end{align}
-Using \eqref{eq:10} and \eqref{eq:11} the equation of the tangent to a circle passing through the point $\vec{p}$ is
-\begin{align}
-    y=\frac{5}{2}x-\frac{71}{6}\label{eq:12}
-\end{align}
-Plot of the tangent to a circle given by equation \eqref{eq:12} is as follows :
+Plot of the tangent to a circle given by equation \eqref{eq:9} is as follows :
 \begin{figure}[h]
 \centering
     \includegraphics[width=\columnwidth]{tangent.png}
