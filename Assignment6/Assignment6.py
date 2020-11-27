@@ -19,9 +19,8 @@ r = np.sqrt(LA.norm(u)**2-f)
 x_circ= circ_gen(u,r)
 plt.plot(x_circ[0,:],x_circ[1,:],label='$circle$')
 
-t=np.arange(-1,2)
-x=6*t + 4
-y=2.5*t-11
+x=np.arange(-1,10)
+y=(5/12)*x-(38/3)
 plt.plot(x,y,label='$tangent$')
 
 plt.annotate("(4, -11)", (4, -11), (4.5, -11.5))
