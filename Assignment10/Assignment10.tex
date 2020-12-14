@@ -1,0 +1,186 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[compact]{titlesec}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+
+\renewcommand{\thefigure}{\theproblem}
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment-10}
+\author{Vipul Kumar Malik}
+
+\date{\today}
+
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{abstract}
+This document explains the relationship between the rank of matrix and the solution of the linear system of equations.
+\end{abstract}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/vipulmalik8569/MT-EE5609
+\end{lstlisting}
+and latex-tikz codes from 
+\begin{lstlisting}
+https://github.com/vipulmalik8569/MT-EE5609
+\end{lstlisting}
+\section{Problem}
+Let $\vec A$ be an $m$ x $n$ matrix with rank $n$ and real entries. Which of the following statements are correct?
+\begin{enumerate}
+    \item $\vec{A}\vec{x}=\vec{b}$ has a solution for any $\vec{b}$.
+    \item $\vec{A}\vec{x}=0$ does not have a solution.
+    \item If $\vec{A}\vec{x}=\vec{b}$ has a solution then it is unique.
+    \item $\vec{y}^T\vec{A}=0$ for some non zero vector $\vec{y}$.
+\end{enumerate}
+\section{solution}
+\subsection{Option 1}
+A solution exist only if $\vec{b}$ lies in the column space of $\vec{A}$. Let us take an example 
+\begin{align}
+    \vec{A}\vec{x}&=\vec{b}\\
+    \myvec{1&0\\0&1\\0&0}\vec{x}&=\myvec{1\\2\\3}
+\end{align}
+Here the system has no solution because the column space of matrix $\vec{A}$ is x-y plane and $\vec{b}$ lies outside it.
+
+
+Thus, option 1 is incorrect.
+\subsection{Option 2}
+For the system $\vec{A}\vec{x}=0$, $\vec{x}=0$ is always the solution.
+
+
+Therefore, option 2 is incorrect.
+\subsection{Option 3}
+There are two possibilities of matrices with dimension $m$ x $n$ and rank $n$ : 
+\begin{enumerate}
+    \item Rectangular matrix with $m>n$.
+    \item Square matrix with $m=n$.
+\end{enumerate}
+Therefore there is no possibility for the system to have infinitely many solutins.
+
+Hence, option 3 is correct.
+\subsection{Option 4}
+Let us consider an example with $\vec{u}$ and $\vec{v}$ as the column vectors of $\vec{A}$ : 
+\begin{align}
+    \vec{y}^T\myvec{\vec{u}&\vec{v}}&=0\\
+    \myvec{\vec{y}^T\vec{u}&\vec{y}^T\vec{v}}&=0
+\end{align}
+This is possible only when vectors $\vec{u}$, $\vec{v}$ and $\vec{y}$ are orthogonal to each other.\\
+Example :
+\begin{align}
+    \myvec{0&0&1}\myvec{1&0\\0&1\\0&0}=\myvec{0&0}\\
+    \vec{u}=\myvec{1\\0\\0}\quad\vec{v}=\myvec{0\\1\\0}\quad\vec{y}=\myvec{0\\0\\1}
+\end{align}
+Hence, option 4 is correct.
+\end{document}
